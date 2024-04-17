@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block content %}
+<body class="body">
+  <div class="form-container">
+    <h1 style="font-family: Garamond, serif">
+      Discover Endless Reading Possibilities!
+    </h1>
+    <p style="font-family: Georgia, sans-serif">
+      Simply tell us what genres you love, your favorite authors, or specific
+      books you've enjoyed in the past, and we'll use that information to curate
+      a list of books we think you'll love. It's like having your own personal
+      book concierge, guiding you to your next literary adventure!
+    </p>
+    <div
+      class="button-row"
+      style="font-family: Garamond, serif; font-weight: bold">
+      <a href="{{ url_for('genre') }}" class="btn1"
+        >Get Book Recommendation Based on Genres</a
+      >
+      <a href="{{ url_for('author') }}" class="btn1"
+        >Get Book Recommendation Based on Authors</a
+      >
+    </div>
+    <div class="button-row">
+      <a href="{{ url_for('title') }}" class="btn1"
+        >Get Book Recommendation Based on Titles</a
+      >
+      <a
+        href="{{ url_for('recommend') }}"
+        class="btn1"
+        style="margin-right: 10px"
+        >Get Personalised Book Recommendation</a
+      >
+    </div>
+  </div>
+</body>
+{% endblock %}

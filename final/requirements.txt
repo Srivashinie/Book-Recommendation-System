@@ -1,0 +1,6 @@
+openai==0.28.1
+python-dotenv
+flask
+flask_cors
+requests
+googlemaps

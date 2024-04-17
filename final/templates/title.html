@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block content %}
+<body class="body">
+  <div class="form-container">
+    <h1 style="font-family: Garamond, serif">
+      Get Book Recommendations Based on Book Titles
+    </h1>
+    <form action="{{ url_for('title') }}" method="POST">
+      <div class="form-group">
+        <label for="books"
+          >Enter top 3 Books you know or like and we will suggest what to read
+          next:</label
+        >
+        <br />
+        <br />
+        <input
+          type="text"
+          name="book1"
+          placeholder="Enter 1st book title"
+          required />
+        <input
+          type="text"
+          name="book2"
+          placeholder="Enter 2nd book title"
+          required />
+        <input
+          type="text"
+          name="book3"
+          placeholder="Enter 3rd book title"
+          required />
+      </div>
+
+      <button type="submit">Get Recommendations</button>
+    </form>
+  </div>
+</body>
+{% endblock %}

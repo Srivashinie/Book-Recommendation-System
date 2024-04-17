@@ -1,0 +1,78 @@
+{% extends "layout.html" %} {% block content %}
+<body class="body">
+  <div class="form-container">
+    <h1 style="font-family: Garamond, serif">
+      Get Personalized Book Recommendations
+    </h1>
+    <p>Enter all fields starting with Uppercase.</p>
+    <form action="{{ url_for('recommend') }}" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="genres">Genres You Like:</label>
+          <input
+            type="text"
+            name="genres"
+            placeholder="Enter genres you like (e.g., Mystery, Romance, Science Fiction)"
+            required />
+        </div>
+        <div class="form-group">
+          <label for="location">Enter you Location:</label>
+          <input
+            type="text"
+            name="location"
+            placeholder="Enter you location"
+            required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="authors">Authors You Like:</label>
+          <input
+            type="text"
+            name="authors"
+            placeholder="Enter authors you like"
+            required />
+        </div>
+        <div class="form-group">
+          <label for="feeling">What tone/mood of story do you want?</label>
+          <input
+            type="text"
+            name="feeling"
+            placeholder="Enter the tone/mood of story like (e.g., Happy, Sad, Funny)"
+            required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="last_read">Your Last Read:</label>
+          <input
+            type="text"
+            name="last_read"
+            placeholder="Enter your last read book"
+            required />
+        </div>
+        <div class="form-group">
+          <label for="favorite_book">Your Favorite Book:</label>
+          <input
+            type="text"
+            name="favorite_book"
+            placeholder="Enter your favorite book"
+            required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="comments">Any Other Comments:</label>
+          <textarea
+            name="comments"
+            placeholder="Enter any other comments you have"
+            rows="4"
+            cols="50"></textarea>
+        </div>
+      </div>
+
+      <button type="submit">Get Recommendations</button>
+    </form>
+  </div>
+</body>
+{% endblock %}
