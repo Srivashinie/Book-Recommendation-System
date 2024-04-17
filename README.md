@@ -17,3 +17,6 @@ This is a book recommendation system that uses the Google Books API and OpenAI A
 - Docker
 - Google Places API
 - Google Cloud Platform
+
+
+The link to the application can be found in the project_url.txt file.
